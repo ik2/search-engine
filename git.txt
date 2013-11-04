@@ -1,3 +1,4 @@
+git commands
 git clone https://github.com/inflatablekayak/search-engine.git
 git add '*.py'
 git commit -m "comment"
