@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>You Follow - Search Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A documentary film that follows Nisha Grayson, an adoptee, who travels back to Goa, India in search of her birth mother." />
+    <meta name="keywords" content="You Follow, documentary, film, movie, India, adoption" />
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="/css/search.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Javascript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/javascript.js"></script>
+  </head>
+  <body>
+    <div style="display: none" id="hideAll">&nbsp;</div>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </a>
+          <a id="brand" class="brand" href="http://youfollowthefilm.com/index.php">You Follow</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="http://youfollowthefilm.com/index.php">Home</a></li>
+              <li ><a href="http://youfollowthefilm.com/resilience.php">Resilience</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">View <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-header">Choose your path</li>
+                  <li ><a href="http://youfollowthefilm.com/trailer.php">Trailer</a></li>
+                  <li class="nav-header">or</li>
+                  <li ><a href="http://youfollowthefilm.com/updates.php">Updates</a></li>
+                </ul>
+              </li>
+              <li ><a href="http://youfollowthefilm.com/family.php">Family</a></li>
+              <li ><a href="http://youfollowthefilm.com/adventure.php">Adventure</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Identity <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-header">Choose your path</li>
+                  <li ><a href="http://youfollowthefilm.com/crew.php">Crew</a></li>
+                  <li class="nav-header">or</li>
+                  <li ><a href="http://youfollowthefilm.com/contact.php">Contact</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gift <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-header">Choose your path</li>
+                  <li ><a href="http://youfollowthefilm.com/donate.php">Donate</a></li>
+                  <li class="nav-header">or</li>
+                  <li ><a href="http://youfollowthefilm.com/share.php">Share</a></li>
+                  <li class="nav-header">or</li>
+                  <li ><a href="http://youfollowthefilm.com/comment.php">Comment</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connect <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-header">Choose your path</li>
+                  <li ><a href="http://youfollowthefilm.com/sponsors.php">Sponsors</a></li>
+                  <li class="nav-header">or</li>
+                  <li ><a href="http://youfollowthefilm.com/press.php">Press</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.NAVBAR --><div class="background"></div>
+    <div class="container-fluid">
+      <div class="content">
+        <form action="/results" method="get">
+          <div><input type="text" name="keyword" /></div>
+          <div><input class="btn btn-primary" type="submit" value="SEARCH">&nbsp&nbsp&nbsp<input class="btn btn-primary" type="submit" value="LUCKY"></div>
+        </form>
+        {% if keyword %}
+          <h1>Search results for "{{ keyword }}":</h1>
+          {% if results %}
+            {% for result in results %}
+              <p><a href="{{ result }}">{{ titles[result] }}</a></p>
+              <p>{{ result }}</p>
+              <p>This is the description of the site.</p><hr />
+            {% endfor %}
+          {% else %}
+            <p>Nothing Found</p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+      <!-- FOOTER -->
+    <div class="container">
+      <hr />
+      <footer>
+        <p class="pull-right visible-phone"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Lavery Productions</p>
+      </footer>
+    </div> <!-- /.container -->
+  </body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,181 @@
+body {  padding-bottom: 5px }
+#hideAll {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 99; /* Higher than anything else in the document */
+}
+.navbar .nav > li > a {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.main {
+  margin: 0 auto;
+  border: 10px groove #dcdb4b;
+  border-radius: 4%;
+  overflow: hidden;
+  margin-top: 10px;
+  background-color: white;
+  width: 100%;
+}
+.main img {  width: 100% }
+.background {
+  background: url("../img/movie_poster_no_text.png") no-repeat 50% 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  z-index: -1;
+}
+.content {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.bold {  font-weight: bold }
+.person {
+  background-color: white;
+  text-align: center;
+}
+.center {  text-align: center }
+#brand {  font-size: 28px }
+.socials {  margin-left: 5px }
+#social1 {
+  margin-top: 8px;
+  margin-bottom: -8px;
+}
+#social2 {
+  margin-top: 7px;
+  margin-bottom: -7px;
+}
+#social3 {
+  margin-top: 7px;
+  margin-bottom: -7px;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.trailer {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 10px groove #dcdb4b;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.btn {  font-weight: bold }
+.sign {
+  width: 50%;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 28px;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px 0;
+  display: inline-block;
+}
+svg {  float: left }
+#sign1 {
+  color: #dcdb4b;
+  background-color: black;
+  border: 2px solid #dcdb4b;
+}
+#sign2 {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+}
+#sign3 {
+  color: gray;
+  background-color: #dcdb4b;
+  border: 2px solid gray;
+}
+#sign4 {
+  color: white;
+  background-color: gray;
+  border: 2px solid black;
+}
+.tright {  text-align: right }
+#galleria {
+  width: 100%;
+  height: 425px;
+}
+.family img {
+  width: 50%;
+  border: 10px groove #dcdb4b;
+  border-radius: 4%;
+}
+.squad {
+  font-size: 26px;
+  line-height: 26px;
+}
+@media (max-width: 980px) { 
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {  float: none }
+}
+@media (min-width:481px) and (max-width:767px) { 
+    .sign {  width: 70% }
+    .span6 p {  text-align: center }
+}
+@media (max-width: 480px) { 
+    .sign {  width: 95% }
+    .span6 p {  text-align: center }
+}
+@media (min-width:767px) and (max-width:1280px) { 
+    .signs,
+    .contact,
+    .crew {
+      margin-top: 50px;
+      margin-bottom: -20px;
+    }
+}
+@media (min-width:1361px) { 
+    .navbar .nav > li > a {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .main {  border-radius: 30px }
+    .sign {
+      font-size: 52px;
+      line-height: 52px;
+      padding: 10px;
+    }
+    .signs,
+    .contact {
+      margin-top: 80px;
+      margin-bottom: -50px;
+    }
+    .content {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    svg {
+      height: 100px;
+      width: 100px;
+    }
+    .span6 p {
+      font-size: 24px;
+      line-height: 48px;
+    }
+}
+@media (min-width:1361px) { 
+    .squad {
+      font-size: 40px;
+      line-height: 40px;
+    }
+}

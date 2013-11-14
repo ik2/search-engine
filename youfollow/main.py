@@ -18,8 +18,8 @@ def main():
                 print "Succesfully wrote my_site to " + fname
         except IOError, e:
             print "Cannot write out my_site: " + str(e)
-    print website._index.keys()
-    print website._index['landscape']
+    print search(website, 'landscape')
+    return website._titles
 
 if __name__ == '__main__':
     main()
